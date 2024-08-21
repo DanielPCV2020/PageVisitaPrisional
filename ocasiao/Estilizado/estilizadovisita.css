@@ -257,7 +257,7 @@ body{
 }
 @media (max-width: 799px) {
   .header-navigation a {
-    display: none;
+    display: block;
   }
 
   .menu-button {
