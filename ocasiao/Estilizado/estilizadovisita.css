@@ -217,4 +217,30 @@ body{
     display: none;
   }
 }
+/* Exibir o botão Menu somente em dispositivos móveis */
+.menu-button {
+  display: none; /* Oculta o botão por padrão */
+}
+
+/* Exibir o botão Menu e ocultar os links em dispositivos móveis */
+@media (max-width: 799px) {
+  .menu-button {
+    display: inline-block; /* Exibe o botão em dispositivos móveis */
+  }
+
+  .header-navigation .nav-links {
+    display: none; /* Oculta os links por padrão em dispositivos móveis */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    padding: 1rem;
+  }
+
+  .header-navigation .nav-links.active {
+    display: flex; /* Exibe os links quando o menu está ativado */
+    flex-direction: column;
+  }
+}
 
