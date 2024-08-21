@@ -55,3 +55,8 @@ function toggleMenu() {
       navLinks.classList.add("show");
   }
 }
+function toggleMenu() {
+  var navLinks = document.querySelector(".nav-links");
+  navLinks.classList.toggle("show");
+}
+  
