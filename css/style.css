@@ -34,16 +34,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
   transform: scale(0.95) rotate(2deg); /* Efeito de clique com escala e rotação */
 }
-.line-5 {
-  height: 5px;
-  background: linear-gradient(
-    to bottom,
-    transparent 2px,
-    black 2px,
-    black 3px,
-    transparent 3px
-  );
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 
  body {
   font-family: 'Open Sans', sans-serif;
@@ -192,7 +189,7 @@ ul.social-links li  img {
 h4.sub-heading {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   color: #4e4c58;
 }
 h1.heading {
@@ -243,11 +240,11 @@ h1.heading:after {
   width: 100%; /* Ocupa 100% da largura do h1 */
   max-width: 450px; /* Define a largura máxima do pseudo-elemento */
   height: 1.5px;
-  background-color: #2f82bd;
+  background-color: #ffffff;
   display: block;
   position: absolute; /* Permite posicionamento absoluto em relação ao h1 */
   bottom: -10px; /* Posiciona o ::after abaixo do h1 */
-  left: 46%; /* Posiciona o ::after no centro horizontal do h1 */
+  left: 50%; /* Posiciona o ::after no centro horizontal do h1 */
   transform: translateX(-50%); /* Ajusta a posição para garantir que fique centralizado */
 }
 /* Sub-footer */
@@ -279,6 +276,7 @@ nav {
   top: 3em;
   cursor: pointer;
   transition: .25s ease-in-out;
+  padding-bottom: 40px;
 }
 #menu-toggle {
   width: 40px;
