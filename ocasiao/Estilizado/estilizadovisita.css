@@ -52,19 +52,48 @@ body{
     margin-bottom: 8px;
 
 }
-.Div-p-Content p{
-    color: #666;
-    font-size: 15px;
-    line-height: 1.3;
+.Div-p-Content p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.3;
+  position: relative;
+  max-height: 4.5em; /* Limita a altura do parágrafo */
+  overflow: hidden;
 }
-.Div-p-Content .btn-read-more{
-    display:inline-block;
-    padding: 8px 16px;
-    background-color: #333;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 16px;
-    color: #fff;
+
+.Div-p-Content p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1.5em; /* Altura do gradiente */
+  background: linear-gradient(transparent, #f0f0f0 90%);
+}
+.Div-p-Content .more {
+  display: none;
+}
+.Div-p-Content .btn-read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 18px;
+  margin-top: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.Div-p-Content.open p {
+  max-height: none;
+  overflow: visible;
+}
+
+.Div-p-Content.open p::after {
+  display: none;
+}
+
+.Div-p-Content.open .more {
+  display: inline;
 }
 #more {display: none;}
 *,
