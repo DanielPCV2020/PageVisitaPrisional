@@ -11,7 +11,7 @@
   background-color: #4e4c58; /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Remove a borda padrão */
-  border-radius: 10px; /* Cantos arredondados maiores */
+  border-radius: 32px; /* Cantos arredondados maiores */
   padding: 30px 60px; /* Espaçamento interno aumentado para botões gigantes */
   font-size: 24px; /* Tamanho da fonte muito grande */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -50,6 +50,7 @@
   color: #222;
   font-weight: normal;
   letter-spacing: 0.03em;
+  overflow-x: hidden; /* Evita rolagem horizontal */
 }
 @media (max-width: 800px) {
   body {
@@ -92,13 +93,28 @@ img {
 
 /* Hero Section */
 header.hero {
-  background: url(../assets/Design\ sem\ nome.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(../assets/Design\ sem\ nome.png) no-repeat center center;
+  background-size: cover; /* Ajusta a imagem para cobrir o fundo sem distorção */
   color: #fff;
   padding-bottom: 50px;
+  width: 100%;
+  min-height: 50vh; /* Ajusta a altura mínima conforme o conteúdo */
+  position: relative;
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+  header.hero {
+    background-attachment: scroll; /* Evita problemas de performance em dispositivos móveis */
+    background-size: cover; /* Garante que a imagem se ajuste bem */
+  }
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 480px) {
+  header.hero {
+    min-height: 40vh; /* Ajusta a altura mínima para telas muito pequenas, se necessário */
+  }
 }
 
 header.hero .hero-text {
@@ -363,14 +379,16 @@ ul.main-nav li {
   display: inline-block;
 }
 ul.main-nav li a {
-  color: #222;
-  font-family: 'Montserrat',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #f5f5f5; /* Off-white, um pouco mais escuro que o branco puro */
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px 15px;
+  font-weight: bold;
 }
+
 ul.main-nav li a:hover {
-  color: #B0E0E6;
+  color: #96c4e4;
 }
 ul.main-nav.show-it {
   opacity: 1;
@@ -379,7 +397,7 @@ ul.main-nav.show-it {
 }
 
 
-/* Let's optimise it for mobile devices */
+/* optimised it for mobile devices */
 
 @media (max-width: 720px){
   .btn-lg {

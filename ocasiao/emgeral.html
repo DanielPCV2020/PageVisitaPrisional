@@ -9,8 +9,10 @@
     <title>O que posso levar?</title>
     <link rel="shortcut icon" href="imagens/brasao-ro.ico" type="image/x-icon">
     <script src="java/funcao.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <header class="header-outer">
         <div class="header-inner responsive-wrapper">
             <div class="header-logo">
@@ -19,15 +21,26 @@
             <nav class="header-navigation">
                 <button class="menu-button" id="btn-mobile" onclick="toggleMenu()">Menu</button>
                 <div class="nav-links" id="navLinks">
-                    <a href="#titulo1">Alimentos Visita Social</a>
-                    <a href="#titulo2">Alimentos Visita Filhos</a>
-                    <a href="#titulo3">Alimentos Visita Conjugal</a>
+                    <a href="#titulo1">Em Triagem </a>
+                    <a href="#titulo2">Higiene Pessoal </a>
+                    <a href="#titulo3">Alimentos</a>
+                    <a href="#titulo4">Vestuários</a>
+                    <a href="#titulo5">Outros</a>
                 </div>
             </nav>
         </div>
     </header>
     <section>
-        <h1 id="titulo1" class="titulo">Alimentos permitidos em visita social</h1>
+
+        <h1 id="titulo1" class="titulo">Itens permitidos aos presos em triagem</h1>
+        <button class="swipe-button" onclick="window.location.href='feminino.html'">
+            ITENS ADICIONAIS FEMININOS
+            <span class="arrows">
+                <span class="arrow"></span>
+                <span class="arrow"></span>
+                <span class="arrow"></span>
+            </span>
+        </button>
         <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
@@ -84,67 +97,6 @@
                     <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
                 </div>
             </div>
-            <div class="Card-1">
-                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
-                <div class="Div-p-Content">
-                    <h3>Pote transparente</h3>
-                    <p>
-                        conteúdo aleatório para teste, conteúdo aleatório para teste
-                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
-                    </p>
-                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
-                </div>
-            </div>
-            <div class="Card-1">
-                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
-                <div class="Div-p-Content">
-                    <h3>Pote transparente</h3>
-                    <p>
-                        conteúdo aleatório para teste, conteúdo aleatório para teste
-                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
-                    </p>
-                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
-                </div>
-            </div>
-            <div class="Card-1">
-                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
-                <div class="Div-p-Content">
-                    <h3>Pote transparente</h3>
-                    <p>
-                        conteúdo aleatório para teste, conteúdo aleatório para teste
-                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
-                    </p>
-                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
-                </div>
-            </div>
-            <div class="Card-1">
-                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
-                <div class="Div-p-Content">
-                    <h3>Pote transparente</h3>
-                    <p>
-                        conteúdo aleatório para teste, conteúdo aleatório para teste
-                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
-                    </p>
-                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
-                </div>
-            </div>
-            <div class="Card-1">
-                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
-                <div class="Div-p-Content">
-                    <h3>Pote transparente</h3>
-                    <p>
-                        conteúdo aleatório para teste, conteúdo aleatório para teste
-                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
-                    </p>
-                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
-                </div>
-            </div>
-            <!-- Outros cartões... -->
-        </div>
-    </section>
-    <section>
-        <h1 id="titulo2" class="titulo">Alimentos permitidos em visita junto aos filhos</h1>
-        <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
                 <div class="Div-p-Content">
@@ -247,7 +199,7 @@
         </div>
     </section>
     <section>
-        <h1 id="titulo3" class="titulo">Alimentos permitidos em visita com o conjugue(a) </h1>
+        <h1 id="titulo2" class="titulo">Itens de higiene pessoal</h1>
         <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
@@ -260,6 +212,307 @@
                     <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
                 </div>
             </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 id="titulo3" class="titulo">Alimentos permitidos em cela</h1>
+        <div class="Card-div-row">
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 id="titulo4" class="titulo">Vestuários permitidos em cela</h1>
+        <div class="Card-div-row">
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+            <div class="Card-1">
+                <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
+                <div class="Div-p-Content">
+                    <h3>Pote transparente</h3>
+                    <p>
+                        conteúdo aleatório para teste, conteúdo aleatório para teste
+                        <span class="more">, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste, conteúdo aleatório para teste</span>
+                    </p>
+                    <a href="javascript:void(0);" class="btn-read-more" onclick="abrirCard(this)">Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 id="titulo5" class="titulo">Outros itens permitidos em cela</h1>
+        <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
                 <div class="Div-p-Content">
