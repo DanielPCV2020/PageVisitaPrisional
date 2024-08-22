@@ -1,22 +1,179 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="device-width, initial-scale = 1.0">
-        <meta name="Author" content="SÂO LUCAS">
-        <meta name=" description" content="Daniel Delfino Neto portfólio">
-        <meta name=" keyboards" content="O que posso levar?">
-        <link rel="shortcut icon" href="ocasiao/imagens/brasao-ro.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="ocasiao/Estilizado/estilizacao.css"/>
-        <title>O que posso levar?</title>
-    </head>
-    <body id="main-body">
-        <h1 id="main-title">O QUE POSSO LEVAR AO RECLUSO,
-            <br/> DEPENDENDO DA OCASIÃO?</h1>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="ocasiao/imagens/brasao-ro.ico" type="image/x-icon">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <title>O que posso levar?</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,700" rel="stylesheet">
 
-        <div id="button-container" class="container">
-            <button id="visit-button" onclick="window.location.href='ocasiao/visita.html'">Em dia de visita</button>
-            <button id="inmate-items-button" onclick="window.location.href='ocasiao/custodiado.html'">Itens para o custodiado</button>
+    </head>
+    <body>
+      <header class="hero">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-6 col-xs-12">
+              <nav>
+                <div id="menu-toggle">
+                  <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+                  <div class="cross">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <ul class="main-nav">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#ocasioes">Visitas</a></li>
+                  <li><a href="#erro">Fale Comigo</a></li>
+                </ul>
+              </nav>
+        
+              <!-- <a href="#" class="menu"><img src="assets/menu.png"></a> -->
+              <div class="hero-text">
+                <h1 id="#home"><span>O QUE POSSO LEVAR</span><br>no dia de visita em sistema prisional de regime fechado?</h1>
+                <h3>Guia de itens permitido pela portaria 4366/2023-SEJUS</h3>
+                <ul class="social-links">
+                  <li class="label">Site em favor de:</li>
+                  <li><img src="assets/logo-governo-ro.0448405a.png"></li>
+                  <li><img src="assets/unnamed.png"> </li>
+                </ul>
+              </div>
+              
+            </div>
+            
+          </div>
         </div>
+      </header>
+
+      <section class="case-study">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 id="ocasioes" class="sub-heading">OCASIÕES</h4>
+              <h1 class="heading grey"><span class="grey">Qual</span> o tipo <br>de instruções você necessita?</h1> 
+              <div class="button-container">
+                <button class="styled-button"onclick="window.location.href='ocasiao/visita.html'">Em dia de visita</button>
+                <button class="styled-button"onclick="window.location.href='ocasiao/custodiado.html'">Itens para o custodiado</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Footer -->
+      <footer>
+        <div class="container-fluid">
+          <div class="row footer">
+            <div class="col-md-12 text-center">
+              <h1>ACADÊMICOS SÃO LUCAS<br><span>DANIEL DELFINO NETO</span><br><span>GUSTAVO RODRIGUES</span> </h1>
+                
+              </div>
+            </div>
+          </div>
+          <div class="row sub-footer">
+            <div class="col-md-12 text-center">
+              <p id=erro>Algum Erro? Me contate<a href="https://www.instagram.com/trsfvp_ro?igsh=d2Q5OXNud2praHVy&utm_source=qr" target="_blank">@trfvp_ro</a> | Envie-me um E-MAIL <a href="mailto:daniel.netoacc@gmail.com?subject=GUIA%20DE%20VISITAS%20AO%20SISTEMA%20PRISIONAL">
+              here</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Some Javascript -->
+      <script src="js/jquery-2.1.1.js"></script>
+      <script src="js/swiper.jquery.min.js"></script>
+      <!-- Initialize Client Swiper -->
+      <script>
+      var swiper1 = new Swiper('.client-swiper', {
+        slidesPerView: 3,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 60,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is <= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: '.swiper-pagination'
+          },
+          // when window width is <= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width is <= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 30
+          }
+        }
+      });
+      // Initialize Testimonial Swiper
+      var swiper2 = new Swiper('.testimonial-swiper', {
+        slidesPerView: 3,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        freeMode: true,
+        breakpoints: {
+          // when window width is <= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          // when window width is <= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          // when window width is <= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
+      });
+      </script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+      <script src="js/jquery.counterup.min.js"></script>
+      <script>
+      // Counterup
+      $('.counter').counterUp({
+        time: 1000
+      });
+
+      // Main Navigation
+      $('#menu-toggle').click(function(){
+        $(this).toggleClass('open'),
+        $('.main-nav').toggleClass('show-it');
+      })
+      </script>
+
+      <!-- Google Analytics - You should remove this -->
+      <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-29231762-2', 'auto');
+      ga('send', 'pageview');
+
+      </script>
     </body>
-</html>
+    </html>
