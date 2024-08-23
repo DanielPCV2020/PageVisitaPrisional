@@ -1,17 +1,45 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll('.Card-1');
+
+  cards.forEach(card => {
+    const content = card.querySelector('p');
+    const btn = card.querySelector('.btn-read-more');
+
+    // Ajuste o limite de linhas visíveis
+    const maxLines = 2;
+    const lineHeight = parseFloat(window.getComputedStyle(content).lineHeight);
+    const maxHeight = maxLines * lineHeight;
+
+    // Verifica se o conteúdo excede a altura visível
+    if (content.scrollHeight > maxHeight) {
+      content.style.maxHeight = `${maxHeight}px`;
+      btn.style.display = 'inline-block'; // Mostra o botão
+    } else {
+      btn.style.display = 'none'; // Oculta o botão se o texto não exceder
+      content.style.maxHeight = 'none'; // Remove o limite de altura
+    }
+  });
+});
+
 function abrirCard(btn) {
-  var card = btn.closest('.Card-1'); // Encontrar o card específico
-  var content = card.querySelector("p"); // Pega o parágrafo do card
-  var parent = content.parentElement; // Pega o elemento .Div-p-Content
-  var btnText = card.querySelector(".btn-read-more"); // Botão
+  const card = btn.closest('.Card-1');
+  const content = card.querySelector('p');
+  const parent = content.parentElement;
 
   parent.classList.toggle('open');
 
   if (parent.classList.contains('open')) {
-      btnText.textContent = "Ver menos"; // Altera o texto do botão para "Ver menos"
+    btn.textContent = "Ver menos";
+    content.style.maxHeight = `${content.scrollHeight}px`; // Ajusta a altura máxima para mostrar todo o texto
   } else {
-      btnText.textContent = "Detalhes"; // Volta o texto do botão para "Detalhes"
+    btn.textContent = "Detalhes";
+    const maxLines = 2;
+    const lineHeight = parseFloat(window.getComputedStyle(content).lineHeight);
+    const maxHeight = maxLines * lineHeight;
+    content.style.maxHeight = `${maxHeight}px`; // Reseta a altura máxima para ocultar o texto extra
   }
 }
+
 
 function toggleMenu() {
   var navLinks = document.getElementById('navLinks');
