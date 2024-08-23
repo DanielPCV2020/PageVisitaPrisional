@@ -39,7 +39,27 @@ function abrirCard(btn) {
     content.style.maxHeight = `${maxHeight}px`; // Reseta a altura máxima para ocultar o texto extra
   }
 }
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the button
+  var mybutton = document.getElementById("btnTop");
 
+  // Hide the button initially
+  mybutton.style.display = "none";
+
+  // Add scroll event listener
+  window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 400) {
+          mybutton.style.display = "block";
+      } else {
+          mybutton.style.display = "none";
+      }
+  });
+
+  // Add click event listener to the button
+  mybutton.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+});
 
 function toggleMenu() {
   var navLinks = document.getElementById('navLinks');
