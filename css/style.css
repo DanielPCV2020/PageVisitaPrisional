@@ -58,6 +58,13 @@
     background-attachment: scroll; /* Permite que a imagem role com o conteúdo */
   }
 }
+.custom-link {
+  color: #fff; /* Cor do link */
+  text-decoration: underline; /* Sublinhado no link */
+}
+.custom-link:hover {
+  color: #fff; /* Cor do link ao passar o mouse */
+}
 a {
   color: #4a494a;
   -webkit-transition: all 0.2s;
@@ -169,6 +176,16 @@ header.hero h1 span,
 header.hero h3 {
   font-weight: 300;
   padding-bottom: 40px;
+}
+header.hero h3 a {
+  color: #fff; /* Cor do link */
+  text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
+  font-weight: bold; /* Deixa o texto em negrito */
+}
+
+header.hero h3 a:hover {
+  color: #ccc; /* Cor do link ao passar o mouse (opcional, ajuste conforme desejado) */
+  text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
 }
 header.hero .btn {
   margin: 3em 0;

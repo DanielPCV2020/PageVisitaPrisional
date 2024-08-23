@@ -27,7 +27,47 @@ body{
   background-color: #F0FFF0; /* Fundo verde claro para contraste suave */
   margin-bottom: 30px; /* Espaço abaixo do título para separar dos outros elementos */
 }
+#btnTop{
+  position: fixed;
+  cursor: pointer;
+  bottom: 18px;
+  left: 30px;
+  border: 2px black;
+  border-radius: 100%;
+}
+#btnTop img{
+  width: 40px;
+  text-align: center;
+  transform: rotate(deg);
+}
+.arrow-left {
+  width: 40px;
+  height: 20px;
+  background-color: #808080;
+  position: relative;
+  cursor: pointer;
+}
 
+.arrow-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid #808080;
+  transform: translateY(-50%);
+}
+
+.arrow-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 20px;
+  background-color: #808080;
+}
 .swipe-button {
   display: inline-flex;
   align-items: center;
@@ -319,7 +359,17 @@ body{
   bottom: -2px;
   left: 0;
 }
-
+.titulo-feminino {
+  font-size: 32px;
+  color: #ff69b4; /* Rosa claro */
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  border-bottom: 2px solid #ff69b4;
+  background-color: #f8d7da; /* Rosa pastel */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
 .main {
   margin-top: 3rem;
 }

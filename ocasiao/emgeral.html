@@ -8,15 +8,15 @@
     <link rel="stylesheet" type="text/css" href="Estilizado/estilizadovisita.css"/>
     <title>O que posso levar?</title>
     <link rel="shortcut icon" href="imagens/brasao-ro.ico" type="image/x-icon">
-    <script src="java/funcao.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="java/funcao.js"></script>
     <header class="header-outer">
         <div class="header-inner responsive-wrapper">
             <div class="header-logo">
-                <img src="imagens/brasao-ro.png" />
+              <img src="imagens/brasao-ro.png" alt="Brasão de RO" style="cursor: pointer;" onclick="window.location.href='https://danielpcv2020.github.io/PageVisitaPrisional/'" />
             </div>
             <nav class="header-navigation">
                 <button class="menu-button" id="btn-mobile" onclick="toggleMenu()">Menu</button>
@@ -581,5 +581,8 @@
               </div>
         </div>
     </section>
+    <button onClick="topFunction()" id="btnTop">
+      <img src="../assets/arrow-left.png" alt="Scroll to top">
+  </button>
 </body>
 </html>

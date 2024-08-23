@@ -11,12 +11,12 @@
     <script src="java/funcao.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
-<body>
+<body class="pagina-especifica">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <header class="header-outer">
         <div class="header-inner responsive-wrapper">
             <div class="header-logo">
-                <img src="imagens/brasao-ro.png" />
+              <img src="imagens/brasao-ro.png" alt="Brasão de RO" style="cursor: pointer;" onclick="window.location.href='https://danielpcv2020.github.io/PageVisitaPrisional/'" />
             </div>
             <nav class="header-navigation">
                 <button class="menu-button" id="btn-mobile" onclick="toggleMenu()">Menu</button>
@@ -28,7 +28,10 @@
         </div>
     </header>
     <section>
-        <h1 id="titulo1" class="titulo">Materiais aicionais permitidos para o público feminino</h1>
+        <h1 id="titulo1" class="titulo-feminino">Materiais aicionais permitidos para o público feminino</h1>
+        <div class="icon-wrapper" onclick="history.back()">
+          <img src="../assets/left.png" alt="Ícone" style="cursor: pointer;"class="icon-left">
+        </div>
         <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
@@ -77,7 +80,7 @@
         </div>
     </section>
     <section>
-        <h1 id="titulo2" class="titulo">Outros itens permitidos para o público lactante</h1>
+        <h1 id="titulo2" class="titulo-feminino">Outros itens permitidos para o público lactante</h1>
         <div class="Card-div-row">
             <div class="Card-1">
                 <img src="imagens/pote-comida1.jpg" alt="Pote transparente">
@@ -147,5 +150,8 @@
               </div>
         </div>
     </section>
+    <button onClick="topFunction()" id="btnTop">
+      <img src="../assets/arrow-left.png" alt="Scroll to top">
+  </button>
 </body>
 </html>
