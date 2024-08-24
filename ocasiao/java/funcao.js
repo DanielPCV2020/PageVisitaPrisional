@@ -1,42 +1,42 @@
 document.addEventListener("DOMContentLoaded", function() {
   const cards = document.querySelectorAll('.Card-1');
-
   cards.forEach(card => {
-    const content = card.querySelector('p');
+    const content = card.querySelector('.text-container p');
     const btn = card.querySelector('.btn-read-more');
-
-    // Ajuste o limite de linhas visíveis
+    const parent = card.querySelector('.Div-p-Content');
+    const textContainer = card.querySelector('.text-container');
+    
     const maxLines = 2;
     const lineHeight = parseFloat(window.getComputedStyle(content).lineHeight);
     const maxHeight = maxLines * lineHeight;
-
-    // Verifica se o conteúdo excede a altura visível
+    
     if (content.scrollHeight > maxHeight) {
-      content.style.maxHeight = `${maxHeight}px`;
-      btn.style.display = 'inline-block'; // Mostra o botão
+      textContainer.style.maxHeight = `${maxHeight}px`;
+      btn.style.display = 'inline-block';
+      parent.classList.add('truncated');
     } else {
-      btn.style.display = 'none'; // Oculta o botão se o texto não exceder
-      content.style.maxHeight = 'none'; // Remove o limite de altura
+      btn.style.display = 'none';
+      textContainer.style.maxHeight = 'none';
+      parent.classList.remove('truncated');
     }
   });
 });
-
 function abrirCard(btn) {
   const card = btn.closest('.Card-1');
-  const content = card.querySelector('p');
-  const parent = content.parentElement;
-
+  const content = card.querySelector('.text-container p');
+  const parent = card.querySelector('.Div-p-Content');
+  const textContainer = card.querySelector('.text-container');
+  
   parent.classList.toggle('open');
-
   if (parent.classList.contains('open')) {
     btn.textContent = "Ver menos";
-    content.style.maxHeight = `${content.scrollHeight}px`; // Ajusta a altura máxima para mostrar todo o texto
+    textContainer.style.maxHeight = `${content.scrollHeight}px`;
   } else {
     btn.textContent = "Detalhes";
     const maxLines = 2;
     const lineHeight = parseFloat(window.getComputedStyle(content).lineHeight);
     const maxHeight = maxLines * lineHeight;
-    content.style.maxHeight = `${maxHeight}px`; // Reseta a altura máxima para ocultar o texto extra
+    textContainer.style.maxHeight = `${maxHeight}px`;
   }
 }
 document.addEventListener('DOMContentLoaded', function() {
