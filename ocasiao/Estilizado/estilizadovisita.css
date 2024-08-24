@@ -270,6 +270,24 @@ body{
 }
 
 /* Styling of other elements */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Cor semi-transparente */
+  z-index: 1000; /* Deve estar acima do menu */
+}
+.nav-links.active + .overlay {
+  display: block;
+}
+@media(min-width: 800px){
+    .nav-links.active + .overlay {
+      display: none;
+    }
+}
 .header-logo img {
   display: block;
   height: calc(var(--header-inner-height) - 10px);
@@ -385,7 +403,8 @@ body{
   width: 250px;
   height: 100%;
   background-color: #fff;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
   padding: 20px;
   overflow-y: auto;
   z-index: 1001; /* Menu lateral com z-index maior que o da navbar */
