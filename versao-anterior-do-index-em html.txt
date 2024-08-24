@@ -12,43 +12,33 @@
   <link href="css/style.css" rel="stylesheet">
   <title>O que posso levar?</title>
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,700" rel="stylesheet">
 
     </head>
     <body>
       <header class="hero">
-        <div class="container">
-          <nav class="main-nav">
-            <div id="menu-toggle">
-              <div class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-              <div class="cross">
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </div>
-            <ul class="main-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#ocasioes">Visitas</a></li>
-              <li><a href="#erro">Fale Comigo</a></li>
-            </ul>
-          </nav>
-          <div class="row">
-            <div id="textomotivacional" class="col-md-6 col-xs-12">
-              <div class="left-text">
-                <div class="salvou" style="padding-right: 60px;">
-                  <h1 style="font-family: 'Great Vibes', cursive; text-align: center;" >"  Valorizar a liberdade e os pequenos gestos de cuidado é construir um futuro mais digno.<br> Com esperança, avançamos para um amanhã melhor.  "</h1>
-                </div>
-              </div>
-            </div>
             <div class="col-md-6 col-xs-12">
+              <nav>
+                <div id="menu-toggle">
+                  <div class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+                  <div class="cross">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                  </div>
+                </div>
+                <ul class="main-nav">
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#ocasioes">Visitas</a></li>
+                  <li><a href="#erro">Fale Comigo</a></li>
+                </ul>
+              </nav>
               <div class="hero-text">
-                <h1 id="#home"><span>O QUE POSSO LEVAR</span><br><span>no dia de visita,</span> em sistema prisional de regime fechado?</h1>
-                <h3 id="portaria">Guia de itens permitido pela portaria <a href="https://drive.google.com/file/d/1Au9vt3Hy8dM5rhYGuHY14EBwLc557xzs/view?usp=drivesdk" target="_blank" style="text-align: center;">4366/2023-SEJUS</a></h3>
+                <h1 id="#home"><span>O QUE POSSO LEVAR</span><br>no dia de visita em sistema prisional de regime fechado?</h1>
+                <h3 id="portaria">Guia de itens permitido pela portaria <a href="https://drive.google.com/file/d/1Au9vt3Hy8dM5rhYGuHY14EBwLc557xzs/view?usp=drivesdk" target="_blank">4366/2023-SEJUS</a></h3>
                 <ul class="social-links">
                   <li class="label">Site em favor de:</li>
                   <li><img src="ocasiao/imagens/brasao-ro.png" style="cursor: pointer;" onclick="window.location.href='https://rondonia.ro.gov.br/portal/'" /></li>
@@ -58,8 +48,7 @@
             </div>
           </div>
         </div>
-      </header>      
-    
+      </header>
       
 
       <section class="case-study">

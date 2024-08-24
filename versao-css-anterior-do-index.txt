@@ -123,51 +123,18 @@ header.hero {
   }
 }
 
+/* Ajuste para telas menores */
 @media (max-width: 480px) {
   header.hero {
     min-height: 40vh; /* Ajusta a altura mínima para telas muito pequenas, se necessário */
   }
 }
-
-.salvou {
+.salvou{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh; /* Ocupa toda a altura da viewport */
-  position: relative; /* Necessário para a animação */
-  animation: slideIn 1s ease-out; /* Aplica a animação */
 }
-
-/* Define a animação de deslizar para o centro */
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%); /* Começa fora da tela à esquerda */
-    opacity: 0; /* Começa invisível */
-  }
-  to {
-    transform: translateX(0); /* Move para a posição final */
-    opacity: 1; /* Torna-se visível */
-  }
-}
-
-@media (max-width: 600px) {
-  .salvou {
-    height: max-content;
-    margin-top: 20%;
-    padding-left: 40px; /* Adiciona espaçamento interno à esquerda */
-    padding-right: 40px; /* Adiciona espaçamento interno à direita */
-  }
-  
-  .salvou h1 {
-    font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
-    text-align: center; /* Garante que o texto esteja centralizado */
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro semi-transparente */
-    border-radius: 18px;
-    padding: 10px;
-  }
-}
-
-
 header.hero .hero-text {
 
   margin-top: 30%;
@@ -357,32 +324,15 @@ nav {
   height: 40px;
   width: 100%;
   position: absolute;
-  right: 3%;
-  top: 3em;
+  right: 0;
+  top: 2em;
   cursor: pointer;
   transition: .25s ease-in-out;
-  position: absolute;
-  z-index: 1000; /* Garante que o menu esteja sempre por cima */
 }
-
 #menu-toggle {
   width: 40px;
+  clear: both;
   float: right;
-} 
-/* Ajuste para dispositivos móveis */
-@media (max-width: 768px) {
-  .hero-text {
-    margin-top: 3em; /* Adiciona espaço entre o texto e o menu */
-  }
-
-  nav.main-nav {
-    top: 3em;
-    right: 3%;
-  }
-
-  #menu-toggle .hamburger {
-    top: 0;
-  }
 }
 #menu-toggle span.line {
   display: block;
