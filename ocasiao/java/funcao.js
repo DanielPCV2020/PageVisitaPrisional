@@ -60,35 +60,29 @@ document.addEventListener('DOMContentLoaded', function() {
       window.scrollTo({top: 0, behavior: 'smooth'});
   });
 });
-
 document.addEventListener('DOMContentLoaded', () => {
   const menuButton = document.getElementById('btn-mobile');
   const navLinks = document.getElementById('navLinks');
   const overlay = document.getElementById('overlay');
   const links = navLinks.querySelectorAll('a');
 
-  // Alterna o menu e o overlay
   const toggleMenu = () => {
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
   };
 
-  // Fecha o menu e o overlay
   const closeMenu = () => {
     navLinks.classList.remove('active');
     overlay.classList.remove('active');
+    document.body.style.overflow = '';
   };
 
-  // Adiciona eventos para o botão de menu e o overlay
   menuButton.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', closeMenu);
 
-  // Fecha o menu ao clicar em um link e adiciona uma classe ao link
   links.forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu();
-      link.classList.add('clicked');
-    });
+    link.addEventListener('click', closeMenu);
   });
 });
 function animateArrow() {
