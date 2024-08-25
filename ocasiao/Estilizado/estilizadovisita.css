@@ -438,6 +438,7 @@ body{
 
 .nav-links.active {
   left: 0; /* Move para dentro da tela */
+  display: block;
 }
 .nav-links a {
   display: block;
@@ -450,12 +451,13 @@ body{
   display: block;
 }
 
+
+
 @media (min-width: 800px) {
   .header-navigation a {
     display: inline-block;
     margin-left: 1.75rem;
   }
-  
   .header-navigation button {
     display: none;
   }
@@ -469,9 +471,8 @@ body{
     box-shadow: none;
     padding: 0;
   }
-
   .nav-links a {
-    margin-bottom: 0;
+    margin-bottom: 2px;
   }
 }
 @media (max-width: 799px) {
@@ -493,7 +494,9 @@ body{
     z-index: 1001;
     transition: left 0.4s ease-in-out;
   }
-
+  .nav-links a {
+    margin-top: 10%;
+  }
   .nav-links.active {
     display: block;
     left: 0;
