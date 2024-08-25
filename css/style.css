@@ -154,8 +154,8 @@ header.hero {
   .salvou {
     height: max-content;
     margin-top: 20%;
-    padding-left: 40px; /* Adiciona espaçamento interno à esquerda */
-    padding-right: 40px; /* Adiciona espaçamento interno à direita */
+    padding-left: 20px; /* Adiciona espaçamento interno à esquerda */
+    padding-right: 20px; /* Adiciona espaçamento interno à direita */
   }
   
   .salvou h1 {
