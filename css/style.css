@@ -67,6 +67,9 @@ html, body {
     background-size: contain; /* Ajusta para conter a imagem inteira dentro do viewport */
     background-attachment: scroll; /* Permite que a imagem role com o conteúdo */
   }
+  .left-text{
+    display: none;
+  }
 }
 .custom-link {
   color: #fff; /* Cor do link */
