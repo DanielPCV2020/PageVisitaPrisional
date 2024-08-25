@@ -105,12 +105,20 @@ window.onload = function() {
       padding: '2rem',
   });
 };
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
+ document.addEventListener('DOMContentLoaded', function() {
+      const sections = document.querySelectorAll('.observacao-section');
 
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+          } else {
+            entry.target.classList.remove('appear');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
