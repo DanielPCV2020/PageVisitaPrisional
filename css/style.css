@@ -41,6 +41,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
   transform: scale(0.95) rotate(2deg); /* Efeito de clique com escala e rotação */
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 @media (max-width: 600px) {
   .button-container {
     flex-direction: column;
