@@ -154,14 +154,14 @@ header.hero {
   .salvou {
     height: max-content;
     margin-top: 20%;
-  }
+  } 
   
   .salvou h1 {
     font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
     text-align: center; /* Garante que o texto esteja centralizado */
     background-color: rgba(0, 0, 0, 0.27); /* Fundo escuro semi-transparente */
     border-radius: 18px;
-    padding: 15px;
+    padding: 10px;
     margin-left: 15%;
   }
 }
