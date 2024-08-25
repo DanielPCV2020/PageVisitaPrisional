@@ -161,7 +161,7 @@ header.hero {
   .salvou {
     height: max-content;
     margin-top: 20%;
-    display: none;
+    display: nones;
   } 
   
   .salvou h1 {
@@ -453,7 +453,7 @@ nav {
 }
 
 ul.main-nav {
-  padding-right: 20px;
+  padding-right: 10px;
   display: flex;
   justify-content: flex-end;
   opacity: 0;

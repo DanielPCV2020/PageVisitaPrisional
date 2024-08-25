@@ -99,7 +99,7 @@ window.onload = function() {
       text: 'Todos os itens estão sujeitos a uma revista pela autoridade competente.',
       icon: 'info',
       confirmButtonText: 'Entendido',
-      confirmButtonColor: '#d33',
+      confirmButtonColor: '#2E8B57',
       background: '#f7f7f7',
       color: '#333',
       padding: '2rem',
