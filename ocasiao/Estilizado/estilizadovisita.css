@@ -11,7 +11,7 @@ html {
 body{
     background-color: #f0f0f0;
     line-height: 1.5;
-    min-height: 300vh;
+
     position: relative;
     padding-bottom: 0;
 }
@@ -534,21 +534,28 @@ body{
   transform: translateY(0);
 }
 /*faq estilizado abaixo*/
+#navegator {
+  max-height: 100vh; /* Limita a altura máxima ao tamanho da viewport */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;  /* Permite rolagem vertical */
+  box-sizing: border-box; /* Garante que padding não aumente a altura total */
+}
 .faq-section {
   background: #fdfdfd;
-
-  padding: 10vh 0 0;
-  overflow: auto; /* Permite rolagem apenas dentro da seção FAQ */
-  max-height: 100vh; /* Limita a altura da seção ao tamanho da tela */
-  box-sizing: border-box; 
+  min-height: 100vh;
+  padding: 10vh 0 0;  
+  overflow: auto; /* Permite rolagem vertical dentro do conteúdo */
 }
 .faq-title h2 {
-position: relative;
-margin-bottom: 45px;
-display: inline-block;
-font-weight: 600;
-line-height: 1;
+  position: relative;
+  margin-bottom: 45px;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
 }
+
 .faq-title h2::before {
   content: "";
   position: absolute;
@@ -559,94 +566,200 @@ line-height: 1;
   bottom: -25px;
   margin-left: -30px;
 }
+
 .faq-title p {
-padding: 0 190px;
-margin-bottom: 10px;
+  padding: 0 190px;
+  margin-bottom: 10px;
 }
 
 .faq {
-background: #FFFFFF;
-box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
-border-radius: 4px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  margin-bottom: 30px; /* Add space below the FAQ container */
 }
 
 .faq .card {
-border: none;
-background: none;
-border-bottom: 1px dashed #CEE1F8;
+  border: none;
+  background: none;
+  border-bottom: 1px dashed #CEE1F8;
+  margin-bottom: 10px; /* Add space between cards */
 }
 
 .faq .card .card-header {
-padding: 0px;
-border: none;
-background: none;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
+  padding: 0px;
+  border: none;
+  background: none;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .faq .card .card-header:hover {
   background: rgba(0, 123, 255, 0.1); /* Azul claro */
 }
+
 .faq .card .card-header .faq-title {
-width: 100%;
-text-align: left;
-padding: 0px;
-padding-left: 30px;
-padding-right: 30px;
-font-weight: 400;
-font-size: 15px;
-letter-spacing: 1px;
-color: #3B566E;
-text-decoration: none !important;
--webkit-transition: all 0.3s ease 0s;
--moz-transition: all 0.3s ease 0s;
--o-transition: all 0.3s ease 0s;
-transition: all 0.3s ease 0s;
-cursor: pointer;
-padding-top: 20px;
-padding-bottom: 20px;
+  width: 100%;
+  text-align: left;
+  padding: 20px 30px;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #3B566E;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 
 .faq .card .card-header .faq-title .badge {
-display: inline-block;
-width: 20px;
-height: 20px;
-line-height: 14px;
-float: left;
--webkit-border-radius: 100px;
--moz-border-radius: 100px;
-border-radius: 100px;
-text-align: center;
-background: #007bff;
-color: #fff;
-font-size: 12px;
-margin-right: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 14px;
+  float: left;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  text-align: center;
+  background: #007bff;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 20px;
+  padding: .25em .2em;
 }
 
 .faq .card .card-body {
-padding: 30px;
-padding-left: 35px;
-padding-bottom: 16px;
-font-weight: 400;
-font-size: 16px;
-color: #6F8BA4;
-line-height: 28px;
-letter-spacing: 1px;
-border-top: 1px solid #F3F8FF;
+  padding: 30px 35px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #6F8BA4;
+  line-height: 28px;
+  letter-spacing: 1px;
+  border-top: 1px solid #F3F8FF;
 }
 
 .faq .card .card-body p {
-margin-bottom: 14px;
+  margin-bottom: 14px;
+}
+
+.icon-wrapper img:hover {
+  transform: scale(1.2); /* Aumenta o botão ao passar o mouse */
 }
 
 @media (max-width: 991px) {
-.faq {
-  margin-bottom: 30px;
+  .faq-section {
+    padding-top: 5vh; /* Reduce top padding on smaller screens */
+  }
+
+  .faq {
+    margin-bottom: 20px; /* Slightly reduce bottom margin on smaller screens */
+  }
+
+  .faq .card .card-header .faq-title {
+    line-height: 26px;
+    margin-top: 10px;
+  }
 }
-.faq .card .card-header .faq-title {
-  line-height: 26px;
-  margin-top: 10px;
+/*faq footer*/
+.footer {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #34495e;
+  padding: 3rem 0;
+  font-family: 'Arial', sans-serif;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 1rem;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #3498db;
+}
+
+.footer-section p {
+  margin: 0.7rem 0;
+  line-height: 1.6;
+}
+
+.unidades {
+  display: flex;
+  flex-direction: column;
+}
+
+.unidade {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.unidade:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: #3498db;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icons a img{
+  width: 40px ;
+}
+.social-icons a:hover {
+  color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+  }
+  .footer-section {
+      margin: 1rem;
+  }
 }
