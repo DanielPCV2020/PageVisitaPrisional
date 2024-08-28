@@ -1,541 +1,673 @@
 
-/* Estilo para o container dos botões */
-.button-container {
-  display: flex; /* Usa flexbox para layout */
-  justify-content: center; /* Centraliza os botões horizontalmente */
-  margin-top: 20px; /* Espaço acima dos botões */
-}
-/* google font */
-.petit-formal-script-regular {
-  font-family: "Petit Formal Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Estilo dos botões */
-.styled-button {
-  background-color: #4e4c58; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  border: none; /* Remove a borda padrão */
-  border-radius: 32px; /* Cantos arredondados maiores */
-  padding: 30px 60px; /* Espaçamento interno aumentado para botões gigantes */
-  font-size: 24px; /* Tamanho da fonte muito grande */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: background-color 0.3s, transform 0.2s; /* Transição para cor e transformação */
-  min-width: 350px; /* Largura mínima dos botões */
-  text-align: center; /* Centraliza o texto dentro do botão */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial do botão */
-  margin: 20px;
-  height: 120px;
-  max-width: 350px;
-}
-/* Estilo ao passar o mouse sobre o botão */
-.styled-button:hover {
-  background-color: #3c3a45; /* Cor de fundo ao passar o mouse */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-  transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
-}
-/* Estilo quando o botão é clicado */
-.styled-button:active {
-  background-color: #33313e; /* Cor de fundo ao clicar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
-  transform: scale(0.95) rotate(2deg); /* Efeito de clique com escala e rotação */
-}
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-@media (max-width: 600px) {
+  /* Estilo para o container dos botões */
   .button-container {
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px; /* Espaço acima dos botões */
   }
-}
+  /* google font */
+  .petit-formal-script-regular {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Estilo dos botões */
+  .styled-button {
+    background-color: #4e4c58; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 32px; /* Cantos arredondados maiores */
+    padding: 30px 60px; /* Espaçamento interno aumentado para botões gigantes */
+    font-size: 24px; /* Tamanho da fonte muito grande */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.2s; /* Transição para cor e transformação */
+    min-width: 350px; /* Largura mínima dos botões */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial do botão */
+    margin: 20px;
+    height: 120px;
+    max-width: 350px;
+  }
+  /* Estilo ao passar o mouse sobre o botão */
+  .styled-button:hover {
+    background-color: #3c3a45; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão ao passar o mouse */
+  }
+  /* Estilo quando o botão é clicado */
+  .styled-button:active {
+    background-color: #33313e; /* Cor de fundo ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
+    transform: scale(0.95) rotate(2deg); /* Efeito de clique com escala e rotação */
+  }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  @media (max-width: 600px) {
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 
- body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f2f2f2;
-  font-size: 16px;
-  color: #222;
-  font-weight: normal;
-  letter-spacing: 0.03em;
-  overflow-x: hidden; /* Evita rolagem horizontal */
-}
-@media (max-width: 800px) {
   body {
-    background-size: contain; /* Ajusta para conter a imagem inteira dentro do viewport */
-    background-attachment: scroll; /* Permite que a imagem role com o conteúdo */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #222;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    overflow-x: hidden; /* Evita rolagem horizontal */
   }
-  .left-text{
-    display: none;
+  @media (max-width: 800px) {
+    body {
+      background-size: contain; /* Ajusta para conter a imagem inteira dentro do viewport */
+      background-attachment: scroll; /* Permite que a imagem role com o conteúdo */
+    }
+    .left-text{
+      display: none;
+    }
   }
-}
-.custom-link {
-  color: #fff; /* Cor do link */
-  text-decoration: underline; /* Sublinhado no link */
-}
-.custom-link:hover {
-  color: #fff; /* Cor do link ao passar o mouse */
-}
-a {
-  color: #4a494a;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-}
-section {
-  width: 100%;
-}
-a:hover, a:focus, a:active {
-  text-decoration: none;
-  outline: none;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  list-style: none;
-}
-img {
-  max-width: 100%;
-}
-.grey {
-  color: #800080;
-}
-.pink {
-  color: #ff2a75;
-}
-.blue {
-  color: #37a7ff;
-}
+  .custom-link {
+    color: #fff; /* Cor do link */
+    text-decoration: underline; /* Sublinhado no link */
+  }
+  .custom-link:hover {
+    color: #fff; /* Cor do link ao passar o mouse */
+  }
+  a {
+    color: #4a494a;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  section {
+    width: 100%;
+  }
+  a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  .grey {
+    color: #800080;
+  }
+  .pink {
+    color: #ff2a75;
+  }
+  .blue {
+    color: #37a7ff;
+  }
 
-/* Hero Section */
-header.hero {
-  background: url(../assets/Design\ sem\ nome.png) no-repeat center center;
-  background-size: cover; /* Ajusta a imagem para cobrir o fundo sem distorção */
-  color: #fff;
-  padding-bottom: 50px;
-  width: 100%;
-  min-height: 50vh; /* Ajusta a altura mínima conforme o conteúdo */
-  position: relative;
-}
-
-/* Ajuste para dispositivos móveis */
-@media (max-width: 768px) {
+  /* Hero Section */
   header.hero {
-    background-attachment: scroll; /* Evita problemas de performance em dispositivos móveis */
-    background-size: cover; /* Garante que a imagem se ajuste bem */
+    background: url(../assets/Design\ sem\ nome.png) no-repeat center center;
+    background-size: cover; /* Ajusta a imagem para cobrir o fundo sem distorção */
+    color: #fff;
+    padding-bottom: 50px;
+    width: 100%;
+    min-height: 50vh; /* Ajusta a altura mínima conforme o conteúdo */
+    position: relative;
   }
-}
 
-@media (max-width: 480px) {
-  header.hero {
-    min-height: 40vh; /* Ajusta a altura mínima para telas muito pequenas, se necessário */
+  /* Ajuste para dispositivos móveis */
+  @media (max-width: 768px) {
+    header.hero {
+      background-attachment: scroll; /* Evita problemas de performance em dispositivos móveis */
+      background-size: cover; /* Garante que a imagem se ajuste bem */
+    }
   }
-}
 
-.salvou {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ocupa toda a altura da viewport */
-  position: relative; /* Necessário para a animação */
-  animation: slideIn 1s ease-out; /* Aplica a animação */
-}
-
-/* Define a animação de deslizar para o centro */
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%); /* Começa fora da tela à esquerda */
-    opacity: 0; /* Começa invisível */
+  @media (max-width: 480px) {
+    header.hero {
+      min-height: 40vh; /* Ajusta a altura mínima para telas muito pequenas, se necessário */
+    }
   }
-  to {
-    transform: translateX(0); /* Move para a posição final */
-    opacity: 1; /* Torna-se visível */
-  }
-}
 
-@media (max-width: 600px) {
   .salvou {
-    height: max-content;
-    margin-top: 20%;
-    display: nones;
-  } 
-  
-  .salvou h1 {
-    font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
-    text-align: center; /* Garante que o texto esteja centralizado */
-    background-color: rgba(0, 0, 0, 0.35); /* Fundo escuro semi-transparente */
-    border-radius: 18px;
-    padding: 10px;
-    margin-left: 15%;
-  }
-}
-
-
-header.hero .hero-text {
-
-  margin-top: 30%;
-  margin-bottom: 20%;
-  background-color: rgba(255, 255, 255, 0.125);
-  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-  backdrop-filter: blur(14.5px);
-  -webkit-backdrop-filter: blur(13.5px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 20px 30px; /* 30px em cima e embaixo, 30px nas laterais */
-  position: relative; /* Necessário para animação */
-  animation: float 3s ease-in-out infinite; /* Aplica a animação */
-}
-
-/* Define a animação de flutuação */
-@keyframes float {
-  0% {
-    transform: translateY(0); /* Posição inicial */
-  }
-  50% {
-    transform: translateY(-10px); /* Move para cima */
-  }
-  100% {
-    transform: translateY(0); /* Volta para a posição inicial */
-  }
-}
-header.hero .row {
-  position: relative;
-}
-a.menu {
-  position: absolute;
-  right: 0;
-  top: 3em;
-}
-a.menu img {
-  max-width: 40px;
-}
-a.menu:hover {
-  transform: translateX(-5px);
-  -webkit-transform: translateX(-5px);
-}
-header.hero h1 {
-  font-family: 'Montserrat', sans-serif;
- 
-  font-weight: 700;
-  line-height: 1.4em;
-}
-header.hero h1 span,
-header.hero h3 {
-  font-weight: 300;
-  padding-bottom: 40px;
-}
-header.hero h3 a {
-  color: #fff; /* Cor do link */
-  text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
-  font-weight: bold; /* Deixa o texto em negrito */
-}
-
-header.hero h3 a:hover {
-  color: #ccc; /* Cor do link ao passar o mouse (opcional, ajuste conforme desejado) */
-  text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
-}
-header.hero .btn {
-  margin: 3em 0;
-}
-
-ul.social-links li {
-  display: inline-block;
-  padding-bottom: 20px;
-
-}
-ul.social-links li a {
-  padding: 5px;
-  opacity: 0.6;
-}
-ul.social-links li.label {
-  font-size: 22px;
-  border-radius:4px;
-  font-weight: 400;
-  text-shadow: 2px 2px 5px #4e4c58;
-}
-ul.social-links li a:hover {
-  opacity: 1;
-}
-ul.social-links li  img {
-  max-height: 60px;
-  margin-left: 10px;
-}
-ul.social-links li img:hover{
-  transform: scale(1.09); /* Aumenta o botão ao passar o mouse */
-}
-
-
-/* Case study */
-.case-study{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-.case-study .col-md-12 {
-  transform: translateY(-80px);
-  -webkit-transform: translateY(-80px);
-  padding: 5em 3em;
-  border-radius: 18px;
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-h4.sub-heading {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color: #4e4c58;
-}
-h1.heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  color: #4e4c58;
-  font-size: 3em;
-  position: relative;
-  padding-bottom: 10px;
-}
-h1.heading span {
-  font-weight: 600;
-}
-h1.heading:after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  height: 3px;
-  width: 100px;
-}
-
-/* Footer */  
-.footer {
-  background: url(../assets/bg-pat.png);
-  background-color: #37324b;
-  padding: 5em;
-  position: relative;
-}
-
-.footer h1 {
-  position: relative; /* Faz com que o ::after se posicione corretamente em relação ao h1 */
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 3em;
-  color: #a3a1ac;
-  margin-bottom: 30px; /* Espaço suficiente para o ::after */
-}
-
-.footer h1 span {
-  color: #fff;
-  font-weight: 300;
-}
-
-.footer h1::after {
-  content: '';
-  width: 100%; /* Ocupa 100% da largura do h1 */
-  max-width: 450px; /* Define a largura máxima do pseudo-elemento */
-  height: 1.5px;
-  background-color: #ffffff;
-  display: block;
-  position: absolute; /* Permite posicionamento absoluto em relação ao h1 */
-  bottom: -10px; /* Posiciona o ::after abaixo do h1 */
-  left: 50%; /* Posiciona o ::after no centro horizontal do h1 */
-  transform: translateX(-50%); /* Ajusta a posição para garantir que fique centralizado */
-}
-/* Sub-footer */
-.sub-footer {
-  background-color: #322e45;
-  padding: 2em;
-  color: #a3a1ac;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-}
-.sub-footer p {
-  margin: 0;
-  font-size: 1.2em;
-}
-.sub-footer p a {
-  color: #fff;
-}
-.sub-footer p a:hover {
-  opacity: 0.8;
-}
-
-
-/* Main navigation */
-nav {
-  height: 40px;
-  width: 100%;
-  position: absolute;
-  right: 3%;
-  top: 3em;
-  cursor: pointer;
-  transition: .25s ease-in-out;
-  position: absolute;
-  z-index: 1000; /* Garante que o menu esteja sempre por cima */
-}
-
-#menu-toggle {
-  width: 40px;
-  float: right;
-} 
-/* Ajuste para dispositivos móveis */
-@media (max-width: 768px) {
-  .hero-text {
-    margin-top: 3em; /* Adiciona espaço entre o texto e o menu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    position: relative; /* Necessário para a animação */
+    animation: slideIn 1s ease-out; /* Aplica a animação */
   }
 
-  nav.main-nav {
+  /* Define a animação de deslizar para o centro */
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%); /* Começa fora da tela à esquerda */
+      opacity: 0; /* Começa invisível */
+    }
+    to {
+      transform: translateX(0); /* Move para a posição final */
+      opacity: 1; /* Torna-se visível */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .salvou {
+      height: max-content;
+      margin-top: 20%;
+      display: nones;
+    } 
+    
+    .salvou h1 {
+      font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
+      text-align: center; /* Garante que o texto esteja centralizado */
+      background-color: rgba(0, 0, 0, 0.35); /* Fundo escuro semi-transparente */
+      border-radius: 18px;
+      padding: 10px;
+      margin-left: 15%;
+    }
+  }
+
+
+  header.hero .hero-text {
+
+    margin-top: 30%;
+    margin-bottom: 20%;
+    background-color: rgba(255, 255, 255, 0.125);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    backdrop-filter: blur(14.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px 30px; /* 30px em cima e embaixo, 30px nas laterais */
+    position: relative; /* Necessário para animação */
+    animation: float 3s ease-in-out infinite; /* Aplica a animação */
+  }
+
+  /* Define a animação de flutuação */
+  @keyframes float {
+    0% {
+      transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+      transform: translateY(-10px); /* Move para cima */
+    }
+    100% {
+      transform: translateY(0); /* Volta para a posição inicial */
+    }
+  }
+  header.hero .row {
+    position: relative;
+  }
+  a.menu {
+    position: absolute;
+    right: 0;
     top: 3em;
-    right: 3%;
   }
-
-  #menu-toggle .hamburger {
-    top: 0;
+  a.menu img {
+    max-width: 40px;
   }
-}
-#menu-toggle span.line {
-  display: block;
-  height: 4px;
-  width: 40px;
-  background-color: #fffb;
-  transition: .25s ease-in-out;
-}
-#menu-toggle .hamburger span.line {
-  margin-bottom: 0.45em;
-  clear: both;
-  float: right;
-}
-#menu-toggle .hamburger span.line:nth-child(1) {
-  width: 30px;
-  transition-delay: .25s;
-}
-#menu-toggle .hamburger span.line:nth-child(2) {
-  transition-delay: .325s;
-}
-#menu-toggle .hamburger span.line:nth-child(3) {
-  width: 20px;
-  transition-delay: .475s;
-}
-
-#menu-toggle .cross span.line {
-  width: 0px;
-  position: absolute;
-  top: 10px;
-  right: 0;
-}
-#menu-toggle .cross span.line:nth-child(1) {
-  transform: rotate(45deg);
-  transition-delay: .0s;
-}
-#menu-toggle .cross span.line:nth-child(2) {
-  transform: rotate(-45deg);
-  transition-delay: .25s;
-}
-
-#menu-toggle.open .hamburger span.line {
-  width: 0px;
-}
-#menu-toggle.open #hamburger span:nth-child(1) {
-  transition-delay: 0s;
-}
-#menu-toggle.open #hamburger span:nth-child(2) {
-  transition-delay: .125s;
-}
-#menu-toggle.open #hamburger span:nth-child(3) {
-  transition-delay: .25s;
-}
-
-#menu-toggle.open .cross span.line:nth-child(1) {
-  width: 40px;
-  transition-delay: 1s;
-}
-#menu-toggle.open .cross span.line:nth-child(2) {
-  width: 40px;
-  transition-delay: 1.25s;
-}
-
-ul.main-nav {
-  padding-right: 10px;
-  display: flex;
-  justify-content: flex-end;
-  opacity: 0;
-  visibility: hidden;
-  transition: .25s all;
-}
-ul.main-nav li {
-  display: inline-block;
-}
-ul.main-nav li a {
-  color: #f5f5f5; /* Off-white, um pouco mais escuro que o branco puro */
-  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 5px 15px;
-  font-weight: bold;
-}
-
-ul.main-nav li a:hover {
-  color: #96c4e4;
-}
-ul.main-nav.show-it {
-  opacity: 1;
-  visibility: visible;
-  transition-delay: .25s;
-}
-
-
-/* optimised it for mobile devices */
-
-@media (max-width: 720px){
-  .btn-lg {
-    padding: .8em 3em;
-    font-size: .8em;
-  }
-  h1.heading {
-    font-size: 2em;
-  }
-  header.hero {
-    text-align: center;
-    padding-bottom: 0;
+  a.menu:hover {
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
   }
   header.hero h1 {
-    font-size: 2em;
-    margin-top: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+  
+    font-weight: 700;
+    line-height: 1.4em;
   }
+  header.hero h1 span,
   header.hero h3 {
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-weight: 300;
+    padding-bottom: 40px;
   }
-  ul.social-links li.label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 1em;
+  header.hero h3 a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+
+  header.hero h3 a:hover {
+    color: #ccc; /* Cor do link ao passar o mouse (opcional, ajuste conforme desejado) */
+    text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
+  }
+  header.hero .btn {
+    margin: 3em 0;
+  }
+
+  ul.social-links li {
+    display: inline-block;
+    padding-bottom: 20px;
+
   }
   ul.social-links li a {
+    padding: 5px;
+    opacity: 0.6;
+  }
+  ul.social-links li.label {
+    font-size: 22px;
+    border-radius:4px;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px #4e4c58;
+  }
+  ul.social-links li a:hover {
     opacity: 1;
   }
-
-  .case-study .col-md-12 {
-    padding-left: 15px;
-    padding-right: 15px;
+  ul.social-links li  img {
+    max-height: 60px;
+    margin-left: 10px;
   }
-  .case-study .col-md-12 {
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
+  ul.social-links li img:hover{
+    transform: scale(1.09); /* Aumenta o botão ao passar o mouse */
   }
 
 
+  /* Case study */
+
+  .case-study .col-md-12 {
+    transform: translateY(-80px);
+    -webkit-transform: translateY(-80px);
+    padding: 5em 3em;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  h4.sub-heading {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #4e4c58;
+  }
+  h1.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #4e4c58;
+    font-size: 3em;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  h1.heading span {
+    font-weight: 600;
+  }
+  h1.heading:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    width: 100px;
+  }
+
+  /* Footer */  
   .footer {
-    padding: 1em 0em;
+    background: url(../assets/bg-pat.png);
+    background-color: #37324b;
+    padding: 5em;
+    position: relative;
+  }
+
+  .footer h1 {
+    position: relative; /* Faz com que o ::after se posicione corretamente em relação ao h1 */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 3em;
+    color: #a3a1ac;
+    margin-bottom: 30px; /* Espaço suficiente para o ::after */
+  }
+
+  .footer h1 span {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .footer h1::after {
+    content: '';
+    width: 100%; /* Ocupa 100% da largura do h1 */
+    max-width: 450px; /* Define a largura máxima do pseudo-elemento */
+    height: 1.5px;
+    background-color: #ffffff;
+    display: block;
+    position: absolute; /* Permite posicionamento absoluto em relação ao h1 */
+    bottom: -10px; /* Posiciona o ::after abaixo do h1 */
+    left: 50%; /* Posiciona o ::after no centro horizontal do h1 */
+    transform: translateX(-50%); /* Ajusta a posição para garantir que fique centralizado */
+  }
+  /* Sub-footer */
+  .sub-footer {
+    background-color: #322e45;
+    padding: 2em;
+    color: #a3a1ac;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+  }
+  .sub-footer p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  .sub-footer p a {
+    color: #fff;
+  }
+  .sub-footer p a:hover {
+    opacity: 0.8;
+  }
+
+
+  /* Main navigation */
+  nav {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    right: 3%;
+    top: 3em;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+    position: absolute;
+    z-index: 1000; /* Garante que o menu esteja sempre por cima */
+  }
+
+  #menu-toggle {
+    width: 40px;
+    float: right;
+  } 
+  /* Ajuste para dispositivos móveis */
+  @media (max-width: 768px) {
+    .hero-text {
+      margin-top: 3em; /* Adiciona espaço entre o texto e o menu */
+    }
+
+    nav.main-nav {
+      top: 3em;
+      right: 3%;
+    }
+
+    #menu-toggle .hamburger {
+      top: 0;
+    }
+  }
+  #menu-toggle span.line {
+    display: block;
+    height: 4px;
+    width: 40px;
+    background-color: #fffb;
+    transition: .25s ease-in-out;
+  }
+  #menu-toggle .hamburger span.line {
+    margin-bottom: 0.45em;
+    clear: both;
+    float: right;
+  }
+  #menu-toggle .hamburger span.line:nth-child(1) {
+    width: 30px;
+    transition-delay: .25s;
+  }
+  #menu-toggle .hamburger span.line:nth-child(2) {
+    transition-delay: .325s;
+  }
+  #menu-toggle .hamburger span.line:nth-child(3) {
+    width: 20px;
+    transition-delay: .475s;
+  }
+
+  #menu-toggle .cross span.line {
+    width: 0px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  #menu-toggle .cross span.line:nth-child(1) {
+    transform: rotate(45deg);
+    transition-delay: .0s;
+  }
+  #menu-toggle .cross span.line:nth-child(2) {
+    transform: rotate(-45deg);
+    transition-delay: .25s;
+  }
+
+  #menu-toggle.open .hamburger span.line {
+    width: 0px;
+  }
+  #menu-toggle.open #hamburger span:nth-child(1) {
+    transition-delay: 0s;
+  }
+  #menu-toggle.open #hamburger span:nth-child(2) {
+    transition-delay: .125s;
+  }
+  #menu-toggle.open #hamburger span:nth-child(3) {
+    transition-delay: .25s;
+  }
+
+  #menu-toggle.open .cross span.line:nth-child(1) {
+    width: 40px;
+    transition-delay: 1s;
+  }
+  #menu-toggle.open .cross span.line:nth-child(2) {
+    width: 40px;
+    transition-delay: 1.25s;
+  }
+
+  ul.main-nav {
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s all;
+  }
+  ul.main-nav li {
+    display: inline-block;
+  }
+  ul.main-nav li a {
+    color: #f5f5f5; /* Off-white, um pouco mais escuro que o branco puro */
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    font-weight: bold;
+  }
+
+  ul.main-nav li a:hover {
+    color: #96c4e4;
+  }
+  ul.main-nav.show-it {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .25s;
+  }
+
+
+  /* optimised it for mobile devices */
+
+  @media (max-width: 720px){
+    .btn-lg {
+      padding: .8em 3em;
+      font-size: .8em;
+    }
+    h1.heading {
+      font-size: 2em;
+    }
+    header.hero {
+      text-align: center;
+      padding-bottom: 0;
+    }
+    header.hero h1 {
+      font-size: 2em;
+      margin-top: 1.5em;
+    }
+    header.hero h3 {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+    ul.social-links li.label {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 1em;
+    }
+    ul.social-links li a {
+      opacity: 1;
+    }
+
+    .case-study .col-md-12 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .case-study .col-md-12 {
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+    }
+
+
+    .footer {
+      padding: 1em 0em;
+    }
+  }
+
+
+
+  .info-container{
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+  }
+
+  .traced-images-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    border-radius: 18px;
+}
+
+.traced-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.traced-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .case-study .col-md-12 {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        padding: 2em 1em;
+    }
+
+    .content-box {
+        padding: 15px;
+    }
+
+    .styled-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .traced-images-container {
+        padding: 15px;
+    }
+
+    .traced-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .traced-images img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+.chat-container{
+  width: 600px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.bubble {
+  --r: 1em;  /* the radius */
+  --t: 1em; /* the size of the tail */
+
+  max-width: 300px;
+  padding: 15px;
+  border-inline: var(--t) solid #0000;
+  border-radius: calc(var(--r) + var(--t))/var(--r);
+  mask: 
+    radial-gradient(100% 100% at var(--_p) 0,#0000 99%,#000 102%) 
+      var(--_p) 100%/var(--t) var(--t) no-repeat,
+    linear-gradient(#000 0 0) padding-box;
+  background: linear-gradient(135deg,#2baf3a,#3fca50) border-box;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+.left {
+  --_p: 0;
+  border-bottom-left-radius: 0 0;
+  place-self: start;
+  margin-bottom: 10%;
+  max-width: 200px;
+}
+.right {
+  --_p: 100%;
+  border-bottom-right-radius: 0 0;
+  place-self: end;
+  margin-left: 30%;
+}
+@media (max-width: 768px) {
+  .traced-images-container {
+    padding: 15px;
+  }
+
+  .traced-images {
+    flex-direction: column; /* Alinha imagens e balões verticalmente em telas pequenas */
+    align-items: center;
+  }
+
+  .traced-images img {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .chat-container {
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
   }
 }
-
-
-
-.info-container{
-  display: flex; align-items: center; justify-content: center; flex-direction: column;
+@media (min-width: 769px) {
+  .imagesp img {
+    position: absolute; /* Adicione esta linha se o elemento não estiver posicionado */
+    margin-left: 11%;
+  }
+}
+.faq-button {
+  background-color: #2e7931; /* Cor do fundo */
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-
+.faq-button:hover {
+  background-color: #419445; /* Cor do fundo ao passar o mouse */
+}
 
