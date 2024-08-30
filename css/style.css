@@ -382,14 +382,17 @@
     .hero-text {
       margin-top: 3em; /* Adiciona espaço entre o texto e o menu */
     }
-
+  
     nav.main-nav {
       top: 3em;
       right: 3%;
     }
-    nav.main-nav a{
-      font-size: 12px;
+    ul.main-nav li a {
+      font-size: 12px !important;
+      padding: 10px 15px !important;
+      white-space: nowrap !important;
     }
+  
     #menu-toggle .hamburger {
       top: 0;
     }
