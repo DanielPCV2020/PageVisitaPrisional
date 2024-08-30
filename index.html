@@ -32,7 +32,6 @@
               </div>
             </div>
             <ul class="main-nav">
-              <li><a id="updateItem" href="index.html">Atualizar</a></li>
               <li><a href="#ocasioes">Visitas</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#erro">Fale Comigo</a></li>
@@ -167,18 +166,6 @@
           }
         }
       });
-      function isSafari() {
-       const userAgent = navigator.userAgent.toLowerCase();
-       return userAgent.indexOf('safari') > -1 && userAgent.indexOf('chrome') === -1;
-       }
-
-       function hideUpdateItemInSafari() {
-       const updateItem = document.getElementById('updateItem');
-       if (isSafari()) {
-              updateItem.style.display = 'none';
-        }
-       }
-
       </script>
       <script src="ocasiao/java/funcaoindex.js"></script>    
       <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
