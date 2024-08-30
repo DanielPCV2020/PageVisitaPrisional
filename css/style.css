@@ -387,7 +387,9 @@
       top: 3em;
       right: 3%;
     }
-
+    nav.main-nav a{
+      font-size: 12px;
+    }
     #menu-toggle .hamburger {
       top: 0;
     }
