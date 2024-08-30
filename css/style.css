@@ -389,8 +389,8 @@
     }
     ul.main-nav li a {
       font-size: 12px !important;
-      padding-right: 4 !important;
-      padding: 10px 15px !important;
+      padding-right: 0 !important;
+      padding: 10px 5px !important;
       white-space: nowrap !important;
     }
   
