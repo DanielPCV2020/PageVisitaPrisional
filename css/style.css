@@ -650,7 +650,8 @@
 @media (min-width: 769px) {
   .imagesp img {
     position: absolute; /* Adicione esta linha se o elemento não estiver posicionado */
-    margin-left: 11%;
+    margin-top: 10px;
+    margin-left: 12%;
   }
   ul.main-nav li a#atualizar-link {
     display: inline-block;
