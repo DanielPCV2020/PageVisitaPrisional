@@ -32,6 +32,7 @@
               </div>
             </div>
             <ul class="main-nav">
+              <li><a href="#" id="atualizar-link">Atualizar</a></li>
               <li><a href="#ocasioes">Visitas</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#erro">Fale Comigo</a></li>
@@ -192,7 +193,15 @@
 
       ga('create', 'UA-29231762-2', 'auto');
       ga('send', 'pageview');
+      document.addEventListener('DOMContentLoaded', function() {
+      var atualizarLink = document.getElementById('atualizar-link');
+      if (atualizarLink) {
+          atualizarLink.addEventListener('click', function(e) {
+              e.preventDefault(); // Previne o comportamento padrão do link
+              location.reload(); // Recarrega a página atual
+          });
+      }});
 
-      </script>
+    </script>
     </body>
     </html>

@@ -392,6 +392,9 @@
       padding-right: 0 !important;
       padding: 10px 7px !important;
     }
+    ul.main-nav li a#atualizar-link {
+      display: none;
+    }
     #menu-toggle .hamburger {
       top: 0;
     }
@@ -648,6 +651,9 @@
   .imagesp img {
     position: absolute; /* Adicione esta linha se o elemento não estiver posicionado */
     margin-left: 11%;
+  }
+  ul.main-nav li a#atualizar-link {
+    display: inline-block;
   }
 }
 .faq-button {
