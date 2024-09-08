@@ -677,3 +677,44 @@
   background-color: #419445; /* Cor do fundo ao passar o mouse */
 }
 
+.swipe-button1 {
+  opacity: 0; /* Inicialmente invisível */
+  position: fixed;
+  right: -100px; /* Começa fora da tela, à direita */
+  bottom: 30px;
+  padding: 8px 15px;
+  background-color: #5651ef;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.5s ease, opacity 0.5s ease; /* Animação suave */
+}
+
+.swipe-button1.show {
+  opacity: 1; /* Aparece com esmaecimento */
+  right: 20px; /* Move o botão para a posição final */
+}
+
+.swipe-button1.hide {
+  opacity: 0; /* Esmaece */
+  right: -100px; /* Sai da tela para a direita */
+}
+
+.swipe-button1:hover {
+  background-color: #6a5dfe;
+  transform: translateY(-3px);
+}
+.btn-informa{
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  margin-right: 10px;
+}

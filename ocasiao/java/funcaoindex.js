@@ -21,3 +21,15 @@ $(document.body).on('click', 'a[href*="#"]', function(e) {
     
     h3Element.innerHTML = `Guia de itens permitido pela portaria <a href="${link}" target="_blank">${linkText}</a>`;
   });
+  
+  window.addEventListener("scroll", function() {
+    const scrollButton = document.getElementById("scrollButton");
+    const scrollPosition = window.scrollY || window.pageYOffset;
+  
+    // Verifica se a rolagem é maior que 400 pixels
+    if (scrollPosition > 400) {
+      scrollButton.classList.add("show");
+    } else {
+      scrollButton.classList.remove("show");
+    }
+  });
