@@ -258,7 +258,7 @@ body, html {
   }
 
   .toggle-btn.open {
-      right: 78.5%;
+      right: 80%;
   }
 
   .toggle-btn::after {
