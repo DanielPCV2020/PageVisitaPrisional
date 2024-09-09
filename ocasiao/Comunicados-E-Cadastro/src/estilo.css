@@ -253,12 +253,12 @@ body, html {
       padding: 10px 15px;
       cursor: pointer;
       box-shadow: -5px 0 10px rgba(0,0,0,0.1);
-      z-index: 1001;
+      z-index: 1001;  
       transition: right 0.3s ease-in-out;
   }
 
   .toggle-btn.open {
-      right: 80%;
+      right: 77%;
   }
 
   .toggle-btn::after {
