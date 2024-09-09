@@ -25,11 +25,13 @@ $(document.body).on('click', 'a[href*="#"]', function(e) {
   window.addEventListener("scroll", function() {
     const scrollButton = document.getElementById("scrollButton");
     const scrollPosition = window.scrollY || window.pageYOffset;
-  
-    // Verifica se a rolagem é maior que 400 pixels
-    if (scrollPosition > 400) {
-      scrollButton.classList.add("show");
+    const pageHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+
+    // Verifica se a rolagem é maior que 400 pixels e ainda não chegou ao final da página
+    if (scrollPosition > 400 && scrollPosition + windowHeight < pageHeight - 100) {
+        scrollButton.classList.add("show");
     } else {
-      scrollButton.classList.remove("show");
+        scrollButton.classList.remove("show");
     }
-  });
+});
