@@ -94,7 +94,7 @@
             <div class="destaques">
                 <h2>Destaques</h2>
                 <div class="iframe-container">
-                    <iframe class="styled-iframe" src="https://rondonia.ro.gov.br/sejus/"></iframe>
+                    <iframe src="https://rondonia.ro.gov.br/sejus/" allow="cookies"></iframe>
                 </div>
             
             <div class="nossos-servicos">
@@ -118,6 +118,17 @@
         </div>
     </div>
     <script>
+        // Tentar acessar o iframe e simular o clique
+        const iframe = document.querySelector('iframe');
+        iframe.onload = function() {
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        
+        // Selecionar o botão e simular o clique
+        const consentButton = iframeDocument.querySelector('.cookie-consent-accept-button');
+        if (consentButton) {
+            consentButton.click();
+        }
+        };
         window.addEventListener('load', function() {
             const iframe = document.getElementById('sejus-iframe');
             iframe.addEventListener('load', function() {
