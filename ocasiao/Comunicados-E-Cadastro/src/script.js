@@ -42,9 +42,10 @@ function nextImage() {
 
 // Buscar imagens da API do Instagram
 const campos = "media_type,media_url";
-const limite = 20;
-const token = "IGQWROU2wzS1hpY0Jxam5XMzBLSmhkUXM4bWc4NmtOYlc4NEM0Y0JwUXRsWjBheEZA2bkxzQzg5RTJfcHlNMW4yQ0N4cC1vZAmlfWWxXRkhheGxzUnBnbzhTSDJsT2lnaWZA3c2ZAFd1JualBNMGkzaXY4STZAtZAEcyOE0ZD";
-const baseURL = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${token}&limit=${limite}`;
+const limite = 5;
+const token = "SUdRV1JQUkZaQUhSa3hEVDJ4b1NEZGZURVJYYzNOWVFVSldlRTVYWWpkcUxYY3lUWEpCWkFtSnNZeko1VVRSWFlYTkJkMFZzVFV0TlpBQzB3ZEVWeUxYTm9aQUVwUVVGSlhVV2xKY21KeFZrMWtWemRaQWJGZEZNRkZUTFZORFYwWkFETkdaQUVZVlpBdlVIRlBWa2cxV1MxUU9FcHVZbDk2VFZScFNYTVpE";
+const decodedToken = atob(token);
+const baseURL = `https://graph.instagram.com/me/media?fields=${campos}&access_token=${decodedToken}&limit=${limite}`;
 
 fetch(baseURL)
     .then(response => response.json())
@@ -83,3 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
         mainContent.style.marginRight = sidePanel.classList.contains('open') ? '300px' : '0';
     });
 });
+(function () {
+    'use strict';
+    var forms = document.querySelectorAll('.needs-validation');
+    
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
